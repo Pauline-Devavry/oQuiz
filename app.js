@@ -1,6 +1,9 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+const router = require("./app/router");
+// Appel du routeur
+app.use(router);
 
 // vu que j'utilise le moteur de template ejs, je le précise à express
 app.set("view engine", "ejs");
